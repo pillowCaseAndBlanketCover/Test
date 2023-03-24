@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+class parentClass{
+    
+    constructor(name){
+        this.name = name;
+        this.property = "Default";
+    }
+
+    parentClassMethod(Default){
+        console.log(Default)
+    }
+}
+class fClass extends parentClass{
+
+    constructor(name){
+        super("Аргумент для родительского конструктора (from fClass)");
+        super.property = "Аргумент для родительского свойства (from fClass)";
+        super.parentClassMethod("Аргумент для родительского метода (from fClass)");
+    }
+}
+const FClass = new fClass();
+console.log(FClass.name);
+console.log(FClass.property);
+
+
+class sClass extends parentClass{
+
+    constructor(name){
+        super("Аргумент для родительского конструктора (from sClass)");
+        super.property = "Аргумент для родительского свойства (from sClass)";
+        super.parentClassMethod("Аргумент для родительского метода (from sClass)");
+    }
+}
+const SClass = new sClass();
+console.log(SClass.name);
+console.log(SClass.property);
+
+</script>
+
+</body>
+</html>
