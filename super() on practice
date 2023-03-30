@@ -8,7 +8,7 @@ class parentClass{
     
     constructor(name){
         this.name = name;
-        this.property = "Default";
+        this.property = "DefaultQQWWSS";
     }
 
     parentClassMethod(Default){
